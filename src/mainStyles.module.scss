@@ -1,0 +1,15 @@
+.container {
+  margin: 10px auto 0 auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+}
+.inner_container {
+  display: flex;
+}
+
+.content_wrapper {
+  background-color: rgb(175, 68, 68);
+  width: 90%;
+  border-radius: 0 0 20px 20px;
+}
