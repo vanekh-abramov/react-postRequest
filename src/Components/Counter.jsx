@@ -4,19 +4,23 @@ import React from "react";
 const Counter = ({count, setCounts}) => {
 
   const increment = () => {
-    if (count < 95) {
-      setCounts(count + 5);
-    } else {
-      setCounts(count === 5);
-    }
+    setCounts((prevCounter)=> {
+      if(prevCounter < 100) {
+        return prevCounter + 5
+      } else {
+        return prevCounter
+      }
+    })
   };
 
   const decrement = () => {
-    if (count > 10) {
-      setCounts(count - 5);
-    } else {
-      setCounts(count === false);
-    }
+    setCounts((prevCounter)=>{
+      if (prevCounter > 5) {
+        return prevCounter - 5
+      } else {
+        return prevCounter
+      }
+    })
   };
 
   return (

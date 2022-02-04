@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Post from "./Post";
@@ -20,9 +19,7 @@ const DataFetching = ({count}) => {
   }, []);
 
   const element = post.map(({ id, title, body }) => {
-    if (id < count + 1) {
-      return <Post key={id} id={id} title={title} body={body} />;
-    }
+      return (id < count + 1) ? <Post key={id} id={id} title={title} body={body} /> : false
   })
 
   return (
